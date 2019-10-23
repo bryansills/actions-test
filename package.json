@@ -2,9 +2,11 @@
   "name": "actions-test",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "timestamp": "node create-timestamp.js"
+    "timestamp": "node create-timestamp.js",
+    "pull-records": "node pull-records.js"
   },
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "node-fetch": "^2.6.0"
   }
 }
