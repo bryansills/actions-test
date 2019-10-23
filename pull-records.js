@@ -16,5 +16,5 @@ fetch(
     return response.json()
 }).then(jsonRes => {
     const timestamp = Date().toString().replace(/[\W_]+/g, "")
-    fs.writeFileSync(path.join(__dirname, `/timestamps/${timestamp}.txt`), JSON.stringify(jsonRes, null, 4))
+    fs.writeFileSync(path.join(__dirname, `/timestamps/${timestamp}.json`), JSON.stringify(jsonRes, null, 4))
 })

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+
+<body>
+    <p id="data"></p>
+    <script>
+        fetch("./timestamps/WedOct232019011612GMT0000CoordinatedUniversalTime.json")
+            .then(res => res.json())
+            .then(jsonRes => {
+                document.getElementById("data").innerHTML = JSON.stringify(jsonRes, null, 4)
+            })
+    </script>
+</body>
