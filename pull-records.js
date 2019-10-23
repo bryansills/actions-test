@@ -6,7 +6,7 @@ const directory = path.join(__dirname, `/records`)
 !fs.existsSync(directory) && fs.mkdirSync(directory)
 
 fetch(
-    "https://api.airtable.com/v0/appggFxxGcngfBBdz/Main?maxRecords=3&view=Grid%20view",
+    "https://api.airtable.com/v0/appggFxxGcngfBBdz/Main?maxRecords=50&view=Grid%20view",
     {
         "headers": {
             "Authorization": "Bearer keyR7Yl2PVWG9daU9"
