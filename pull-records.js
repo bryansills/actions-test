@@ -30,7 +30,7 @@ const fetchAllData = async () => {
         offset = page.offset
     }
 
-    return records
+    return { records }
 }
 
 fetchAllData().then(jsonRes => {
