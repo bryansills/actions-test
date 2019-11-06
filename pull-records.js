@@ -13,7 +13,7 @@ const fetchPage = async (offset) => {
         `https://api.airtable.com/v0/appggFxxGcngfBBdz/Main?view=Grid%20view${offsetQueryParam}`,
         {
             "headers": {
-                "Authorization": airtableApiKey
+                "Authorization": `Bearer ${airtableApiKey}`
             }
         }
     )
