@@ -7,6 +7,10 @@ const airtableApiKey = process.argv[2]
 const directory = path.join(__dirname, `/records`)
 !fs.existsSync(directory) && fs.mkdirSync(directory)
 
+const sleep = (ms) => {
+    return new Promise(resolve => setTimeout(resolve, ms))
+}
+
 const fetchPage = async (offset) => {
     const offsetQueryParam = !!offset ? `&offset=${offset}` : ""
     const networkResult = await fetch(
@@ -28,6 +32,7 @@ const fetchAllData = async () => {
         const page = await fetchPage(offset)
         records = [...records, ...page.records]
         offset = page.offset
+        await sleep(250)
     }
 
     return { records }
