@@ -34,6 +34,9 @@ const fetchAllData = async () => {
 }
 
 fetchAllData().then(jsonRes => {
+    const directory = path.join(__dirname, `/timestamps`)
+    !fs.existsSync(directory) && fs.mkdirSync(directory)
+
     const timestamp = Date().toString().replace(/[\W_]+/g, "")
     fs.writeFileSync(path.join(__dirname, `/timestamps/${timestamp}.json`), JSON.stringify(jsonRes, null, 4))
 })
