@@ -2,6 +2,8 @@ const fs = require("fs")
 const path = require("path")
 const fetch = require("node-fetch")
 
+const airtableApiKey = process.argv[2]
+
 const directory = path.join(__dirname, `/records`)
 !fs.existsSync(directory) && fs.mkdirSync(directory)
 
@@ -11,7 +13,7 @@ const fetchPage = async (offset) => {
         `https://api.airtable.com/v0/appggFxxGcngfBBdz/Main?view=Grid%20view${offsetQueryParam}`,
         {
             "headers": {
-                "Authorization": "Bearer keyR7Yl2PVWG9daU9"
+                "Authorization": airtableApiKey
             }
         }
     )
