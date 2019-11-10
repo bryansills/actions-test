@@ -32,6 +32,7 @@ const fetchAllData = async () => {
         const page = await fetchPage(offset)
         records = [...records, ...page.records]
         offset = page.offset
+        console.log(`Count: ${page.records.length} Offset: ${page.offset}`)
         await sleep(250)
     }
 
