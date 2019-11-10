@@ -5,10 +5,7 @@
             "fields": {
                 "Name": "Buttz",
                 "Time": "Now",
-                "Severity": "Not that bad",
-                "Linked": [
-                    "recxVtbTI5zB5PriY"
-                ]
+                "Severity": "Not that bad"
             },
             "createdTime": "2019-10-23T00:42:12.000Z"
         },
@@ -17,10 +14,7 @@
             "fields": {
                 "Name": "McGhee",
                 "Time": "Yesterday",
-                "Severity": "Kinda bad",
-                "Linked": [
-                    "recxljLSgYeRyFKQ6"
-                ]
+                "Severity": "Kinda bad"
             },
             "createdTime": "2019-10-23T00:42:12.000Z"
         },
@@ -29,10 +23,7 @@
             "fields": {
                 "Name": "Boaty",
                 "Time": "Last year",
-                "Severity": "Real bad",
-                "Linked": [
-                    "recURBb8SviCm3a4f"
-                ]
+                "Severity": "Real bad"
             },
             "createdTime": "2019-10-23T00:42:12.000Z"
         },
@@ -41,10 +32,7 @@
             "fields": {
                 "Name": "New entry",
                 "Time": "Like a minute ago",
-                "Severity": "Super cool",
-                "Linked": [
-                    "recapKW4oCTC1Ate4"
-                ]
+                "Severity": "Super cool"
             },
             "createdTime": "2019-10-23T01:05:46.000Z"
         },
@@ -53,10 +41,7 @@
             "fields": {
                 "Name": "New entry",
                 "Time": "Like a minute ago",
-                "Severity": "Super cool",
-                "Linked": [
-                    "recURBb8SviCm3a4f"
-                ]
+                "Severity": "Super cool"
             },
             "createdTime": "2019-10-23T01:06:09.000Z"
         },
