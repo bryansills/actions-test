@@ -37,6 +37,9 @@ jobs:
     - name: env condish
       if: env.GOOD == 'NO'
       run: echo "stuffs bad, dude"
+    - name: env bad condish
+      if: env.GOOD == 'NAH'
+      run: echo "not gonna happen"
     - name: Commit files
       run: |
         git add .
