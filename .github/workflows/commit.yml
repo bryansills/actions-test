@@ -3,6 +3,9 @@ name: CI
 on:
   schedule:
     - cron: "*/3 * * * *"
+  push:
+    branches:
+      - master
 
 jobs:
   build:
