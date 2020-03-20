@@ -13,6 +13,9 @@ jobs:
       matrix:
         node-version: [12.x]
 
+    env:
+      GOOD: "NO"
+
     steps:
     - uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
@@ -25,6 +28,9 @@ jobs:
         npm run pull-records ${{ secrets.AIRTABLE_API_KEY }}
       env:
         CI: true
+    - name: env var
+      run: |
+        echo $GOOD
     - name: Commit files
       run: |
         git add .
