@@ -38,7 +38,7 @@ jobs:
       if: env.GOOD == 'NO'
       run: |
         echo "stuffs bad, dude"
-        ::set-output name=GOOD::NAH
+        echo ::set-output name=GOOD::NAH
     - name: env bad condish
       if: env.GOOD == 'NAH'
       run: echo "not gonna happen"
