@@ -34,7 +34,7 @@ jobs:
     - name: env condish
       run: |
         echo "stuffs bad, dude"
-        echo "::set-output name=GOOD::NAH"
+        echo "::set-env name=GOOD::NAH"
     - name: new val
       run: echo $GOOD
     - name: env bad condish
