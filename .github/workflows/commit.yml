@@ -16,9 +16,6 @@ jobs:
       matrix:
         node-version: [12.x]
 
-    env:
-      GOOD: "NO"
-
     steps:
     - uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
@@ -35,7 +32,6 @@ jobs:
       run: |
         echo $GOOD
     - name: env condish
-      if: env.GOOD == 'NO'
       run: |
         echo "stuffs bad, dude"
         echo "::set-output name=GOOD::NAH"
