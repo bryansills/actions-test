@@ -15,7 +15,6 @@ jobs:
         node-version: [12.x]
 
     steps:
-    - continue-on-error: true
     - uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
@@ -29,6 +28,7 @@ jobs:
         CI: true
     - id: has-changes
       name: Check to see if anything changed
+      continue-on-error: true
       run: |
         git status --porcelain
     - name: Commit files
