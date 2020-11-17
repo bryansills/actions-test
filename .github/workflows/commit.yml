@@ -27,7 +27,7 @@ jobs:
       env:
         CI: true
     - name: Commit files
-      if: {{ git status --porcelain }}
+      if: ${{ git status --porcelain }}
       run: |
         git add .
         git config --local user.email "action@github.com"
