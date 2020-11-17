@@ -39,6 +39,7 @@ jobs:
         git config --local user.name "GitHub Action"
         git commit -m "Add a new timestamp" -a
     - name: Push changes
+      if: ${{ steps.has-changes.outcome == 'failure' }}
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
