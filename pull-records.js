@@ -43,12 +43,12 @@ fetchAllData().then(jsonRes => {
     const directory = path.join(__dirname, `/timestamps`)
     !fs.existsSync(directory) && fs.mkdirSync(directory)
 
-    // const latestPath = path.join(__dirname, `/timestamps/latest.json`)
-    // if (fs.existsSync(latestPath)) {
-    //     const timestamp = Date().toString().replace(/[\W_]+/g, "")
-    //     const newPath = path.join(__dirname, `/timestamps/old-${timestamp}.json`)
-    //     fs.renameSync(latestPath, newPath)
-    // }
+    const latestPath = path.join(__dirname, `/timestamps/latest.json`)
+    if (fs.existsSync(latestPath)) {
+        const timestamp = Date().toString().replace(/[\W_]+/g, "")
+        const newPath = path.join(__dirname, `/timestamps/old-${timestamp}.json`)
+        fs.renameSync(latestPath, newPath)
+    }
 
-    // fs.writeFileSync(latestPath, JSON.stringify(jsonRes, null, 4))
+    fs.writeFileSync(latestPath, JSON.stringify(jsonRes, null, 4))
 })
