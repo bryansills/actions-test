@@ -30,16 +30,22 @@ jobs:
       name: Check to see if anything changed
       continue-on-error: true
       run: |
-        git status --porcelain
+        if [[ `git status --porcelain` ]]; then
+          # There are changes
+          exit 0
+        else
+          # No changes
+          exit 1
+        fi
     - name: Commit files
-      if: ${{ steps.has-changes.outcome == 'failure' }}
+      if: ${{ steps.has-changes.outcome == 'success' }}
       run: |
         git add .
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -m "Add a new timestamp" -a
     - name: Push changes
-      if: ${{ steps.has-changes.outcome == 'failure' }}
+      if: ${{ steps.has-changes.outcome == 'success' }}
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
